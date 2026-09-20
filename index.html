@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Meowdoku</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <div>
+        <h1>Meowdoku</h1>
+        <p>Place one cat in every row, column, and colour region. Cats cannot touch — not even diagonally.</p>
+      </div>
+      <div class="stats">
+        <span id="difficultyLabel">Easy</span>
+        <span id="moves">0 moves</span>
+      </div>
+    </header>
+
+    <section class="controls" aria-label="Game controls">
+      <label>Difficulty
+        <select id="difficulty">
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+      </label>
+      <button id="newGame">New Game</button>
+      <button id="hint">Hint</button>
+      <button id="check">Check</button>
+      <button id="clear">Clear</button>
+    </section>
+
+    <section class="game-area">
+      <div id="board" class="board" aria-label="Meowdoku board"></div>
+      <aside class="side">
+        <div class="panel">
+          <h2>Rules</h2>
+          <ul>
+            <li>Exactly one cat in each row.</li>
+            <li>Exactly one cat in each column.</li>
+            <li>Exactly one cat in each connected colour region.</li>
+            <li>Cats may not touch horizontally, vertically, or diagonally.</li>
+          </ul>
+        </div>
+        <div id="message" class="message" aria-live="polite">Choose a cell to place a cat.</div>
+      </aside>
+    </section>
+
+    <footer>Click cells to place or remove cats. A new puzzle is generated locally in your browser.</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
